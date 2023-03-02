@@ -231,7 +231,7 @@ def __main__():
     with torch.cuda.device("cuda:%d" % gpu_id):
 
         # The shape must be (samples, time, variables)
-        dataset = torch.load(input) #torch.load("%s/%s" % (args.working_directory, args.input)).pin_memory()
+        dataset = torch.load("%s/%s" % (args.working_directory, args.input)).pin_memory()
         assert (3 >= dataset.ndim >= 2), "Incompatible number of dimensions."
         dataset = torch.unsqueeze(dataset, dim=0) if dataset.ndim == 2 else dataset
         # Verbosing the dataset information
