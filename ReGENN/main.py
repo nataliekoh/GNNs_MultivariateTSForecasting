@@ -173,6 +173,7 @@ def __main__():
     output_file += "-AR" if args.autoregression else ""
     output_file += " +b" if args.bias else " -b"
     output_file += " | " + args.network_uuid
+    print(output_file)
 
     # String package for printing dictionaries and regular strings
     pp = pprint.PrettyPrinter(compact=True)
@@ -347,6 +348,7 @@ def train_once(dataset, args):
     tk = str(tuple(tokenizer(trainer, idx) for idx in metric_list))
     # After a few tweaks, the summary string will be ready to be pasted to a spreadsheet
     print("%s\t%s" % (tk.replace("(", "").replace(")", "").replace(", ", "\t").replace("'", ""), args.network_uuid))
+
 
 
 def __state_dict(trainer, args):
