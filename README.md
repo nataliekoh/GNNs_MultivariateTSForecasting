@@ -13,6 +13,6 @@ Natalie Koh, Zachary Laswick, Daiwei Shen
 ## Scripts
 - For data pre-processing, see `PruneDatasets_SingleSubject.ipynb`.
 - To run STEP on the datasets, use scripts in STEP/ModifiedSTEPCode.
-- To run Graph WaveNET, use scripts in WaveNet/ModifiedWaveNetCode.
+- To run Graph WaveNET, `cd` into the WaveNet directory and run `python trainpy --gcn_bool`.
 - To run the simple GCN implemented in Keras, use `KerasGNNwLSTM.ipynb`.
 
